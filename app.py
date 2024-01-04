@@ -1,3 +1,4 @@
+#ESTES SÃO INSTALADOS VIA TERMINAL NO VSCODE
 #pip install types-openpyxl
 #pip install pyautogui
 #pip install pillow 
@@ -15,7 +16,7 @@ import pyautogui
 
 webbrowser.open('https://web.whatsapp.com/',)
 sleep(30)
-workbook = openpyxl.load_workbook('clientes.xlsx')
+workbook = openpyxl.load_workbook('clientes.xlsx')#CONFECCIONE SUA LISTA SEM CABEÇALHO, CONTENDO NOME, TELEFONE E DATA DE VENCIMENTO PARA COBRANÇA.
 pagina_clientes = workbook['Planilha1']
 
 for linha in pagina_clientes.iter_rows(min_row=2):
@@ -30,7 +31,7 @@ for linha in pagina_clientes.iter_rows(min_row=2):
     webbrowser.open(link_msg_whatsapp)
     sleep(10)
     try:  
-        seta = pyautogui.locateCenterOnScreen('setaoficial.png')
+        seta = pyautogui.locateCenterOnScreen('setaoficial.png')#IMAGEM ESTÁ NO REPOSITORIO
         sleep(5)
         pyautogui.click(seta[0],seta[1])
         sleep(5)
